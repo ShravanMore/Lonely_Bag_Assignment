@@ -1,0 +1,32 @@
+{
+  "..\\app\\favorites\\page.tsx -> @/components/MovieGrid": {
+    "id": "..\\app\\favorites\\page.tsx -> @/components/MovieGrid",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_MovieGrid_tsx-_c3711.js"
+    ]
+  },
+  "..\\app\\favorites\\page.tsx -> @/components/Navbar": {
+    "id": "..\\app\\favorites\\page.tsx -> @/components/Navbar",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Navbar_tsx-_53b60.js"
+    ]
+  },
+  "..\\app\\not-found.tsx -> @/components/Navbar": {
+    "id": "..\\app\\not-found.tsx -> @/components/Navbar",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Navbar_tsx-_53b62.js"
+    ]
+  },
+  "..\\app\\page.tsx -> @/components/MovieGrid": {
+    "id": "..\\app\\page.tsx -> @/components/MovieGrid",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_MovieGrid_tsx-_c3710.js"
+    ]
+  },
+  "..\\app\\page.tsx -> @/components/Navbar": {
+    "id": "..\\app\\page.tsx -> @/components/Navbar",
+    "files": [
+      "static/chunks/_app-pages-browser_src_components_Navbar_tsx-_53b61.js"
+    ]
+  }
+}
