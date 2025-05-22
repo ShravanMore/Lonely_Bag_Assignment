@@ -1,4 +1,4 @@
-import { users } from "../[...nextauth]/route";
+import { users } from "../users";
 
 export async function POST(request: Request) {
   const body = await request.json();

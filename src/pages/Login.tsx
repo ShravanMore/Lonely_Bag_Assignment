@@ -3,15 +3,15 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { login } from "@/services/authService";
 import { useAuth } from "@/contexts/AuthContext";
 import { useToast } from "@/components/ui/use-toast";
+import { signIn } from "next-auth/react";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const { isAuthenticated, login: authLogin } = useAuth();
+  const { isAuthenticated } = useAuth();
   const { toast } = useToast();
   const router = useRouter();
 
@@ -20,8 +20,7 @@ const Login: React.FC = () => {
     setLoading(true);
     
     try {
-      const user = login({ email, password });
-      authLogin(user);
+      const user = signIn("credentials", { redirect: false, email, password });
       toast({
         title: "Login successful",
         description: "Welcome back to MovieExplorer!",

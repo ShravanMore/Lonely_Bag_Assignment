@@ -1,13 +1,9 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { NextAuthOptions } from "next-auth";
+import { users } from "../users";
 
-// In-memory users array for demo (since localStorage is not available on server)
-export let users: { name: string; email: string; password: string }[] = [
-  { name: "Test User", email: "test@example.com", password: "password" },
-];
-
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
