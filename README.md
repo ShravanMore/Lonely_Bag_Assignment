@@ -1,77 +1,67 @@
-# Migration Note
+# 🎬 Movie Explorer App
 
-This project is being migrated from Vite + React to Next.js 14 with the App Router. Routing and main pages are now in the `app/` directory.
+A fully functional Movie Explorer App built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**, allowing users to browse, search, and favorite movies using data from the [TMDB API](https://www.themoviedb.org/).
 
-# Welcome to your Lovable project
+---
 
-## Project info
+## 🚀 Features
 
-**URL**: https://lovable.dev/projects/29f26f85-9258-480d-a4b3-3eb4055f3f08
+- 🔐 **Authentication**  
+  - Register and login functionality using **NextAuth.js** or JWT.  
+  - Auth state stored in cookies or localStorage.  
+  - Protected routes for authenticated users only.
 
-## How can I edit this code?
+- 🎞️ **Movie Listing**  
+  - Fetches and displays movies from the TMDB API.  
+  - Infinite scrolling or pagination support.  
+  - Displays movie poster, title, and rating.
 
-There are several ways of editing your application.
+- 🔍 **Dynamic Search**  
+  - Search bar to find movies by name using TMDB's search API.  
+  - Instant results display on input.
 
-**Use Lovable**
+- 📄 **Movie Detail Page**  
+  - Detailed information on each movie: title, overview, rating, release date, etc.  
+  - SEO-friendly dynamic routing via `/movie/[id]`.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/29f26f85-9258-480d-a4b3-3eb4055f3f08) and start prompting.
+- ❤️ **Favorites Feature**  
+  - Add/remove movies from favorites.  
+  - Favorites persist in localStorage.  
+  - View all favorites on the **My Favorites** page.
 
-Changes made via Lovable will be committed automatically to this repo.
+- 💡 **UI & Performance Optimizations**  
+  - Responsive design with Tailwind CSS.  
+  - Optimized images using `next/image`.  
+  - Smooth UX with skeleton loaders during data fetching.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🧰 Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Framework**: [Next.js 14 (App Router)](https://nextjs.org/)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Auth**: NextAuth.js or JWT
+- **API**: [TMDB (The Movie Database)](https://www.themoviedb.org/documentation/api)
+- **State Persistence**: localStorage / cookies
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📦 Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+bash
+# Clone the repo
+git clone https://github.com/your-username/movie-explorer-app.git
+cd movie-explorer-app
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Create .env.local file with the following:
+# TMDB_API_KEY=your_tmdb_api_key
+# NEXTAUTH_SECRET=your_nextauth_secret (if using NextAuth)
+# NEXTAUTH_URL=http://localhost:3000
+
+# Run the dev server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/29f26f85-9258-480d-a4b3-3eb4055f3f08) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
